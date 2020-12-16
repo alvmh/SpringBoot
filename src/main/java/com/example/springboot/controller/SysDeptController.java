@@ -26,7 +26,7 @@ public class SysDeptController {
         String deptName = "战略部";
         Map<String,Object> result = new HashMap<String, Object>();
         SysDeptEntity sysDept = sysDeptService.readByFullName(deptName);
-        String mysysDept = sysDept.getDescription()+"---"+sysDept.getCreateTime();
+        String mysysDept = sysDept.getDeptId()+"-";
         //Assert.notNull(sysDept);
         //result.put("name", sysDept.getFullName());
         result.put("name", mysysDept);
