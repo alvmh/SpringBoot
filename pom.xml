@@ -38,6 +38,19 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!--sqlsserver-->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId><!--sqlserver依赖  驱动jar-->
+            <scope>runtime</scope>
+            <version>6.4.0.jre8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>4.0</version>
+            <scope>test</scope>
+        </dependency>
         <!--数据库连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -54,6 +67,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.61</version>
+            <scope>compile</scope>
         </dependency>
 
         <!--  <dependency>

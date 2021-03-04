@@ -29,7 +29,10 @@ public class SysDeptController {
         String mysysDept = sysDept.getDescription()+"---"+sysDept.getCreateTime();
         //Assert.notNull(sysDept);
         //result.put("name", sysDept.getFullName());
+
+        String dept = sysDeptService.readByFullName1(deptName);
         result.put("name", mysysDept);
+        result.put("dept", dept);
         return result;
     }
 }

@@ -11,8 +11,8 @@ import javax.annotation.Resource;
 @Service
 public class SysDeptServiceImpl implements SysDeptService{
 
-   /* @Autowired(required = false)
-    private SysDeptDao sysDeptDao;*/
+    @Autowired(required = false)
+    private SysDeptDao sysDeptDao;
 
     @Autowired(required = false)
     private SysDeptMapper sysDeptMapper;
@@ -20,6 +20,11 @@ public class SysDeptServiceImpl implements SysDeptService{
     @Override
     public SysDeptEntity readByFullName(String name) {
         return sysDeptMapper.readByFullName(name);
+    }
+
+    @Override
+    public String readByFullName1(String name) {
+        return sysDeptDao.readByFullName(name);
     }
 
 }
